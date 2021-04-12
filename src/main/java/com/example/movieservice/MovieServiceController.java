@@ -113,7 +113,7 @@ public class MovieServiceController {
       
     }
 
-    @DeleteMapping(path="/movie/{id}", consumes = "application/json")
+    @DeleteMapping(path="/movie/{id}")
     @CrossOrigin(origins ="*")
     ResponseEntity<Void> deleteMovie(@PathVariable Integer id){
         Movie deleteMovie = movieRepository.findById(id).get();
