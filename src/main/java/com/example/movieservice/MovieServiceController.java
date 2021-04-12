@@ -62,7 +62,7 @@ public class MovieServiceController {
         dbMovie.setActor(updatedMovie.getActor());
         dbMovie.setGenre(updatedMovie.getGenre());
         dbMovie.setReleased(updatedMovie.getReleased());
-        //dbMovie.setLanguage(updatedMovie.getLanguage());
+        dbMovie.setLanguage(updatedMovie.getLanguage());
 
         movieRepository.save(dbMovie);       
 
@@ -97,10 +97,10 @@ public class MovieServiceController {
                 dbMovie.setActor(updatedMovie.getActor());
     
             }
-            /* if(updatedMovie.getLanguage() != null){
+            if(updatedMovie.getLanguage() != null){
                 dbMovie.setLanguage(updatedMovie.getLanguage());
     
-            }  */
+            } 
             
             movieRepository.save(dbMovie);
             return ResponseEntity.ok().build(); 

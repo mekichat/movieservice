@@ -15,7 +15,7 @@ public class Movie {
     private String actor;
     private int released;
     private String genre;
-    //private String language;
+    private String language;
 
     public Integer getId() {
         return id;
@@ -70,14 +70,14 @@ public class Movie {
     }
     
 
-    /* public void setLanguage(String s)
+    public void setLanguage(String s)
     {
         language  = s;
     }
     public String getLanguage()
     {
         return language;
-    } */
+    }
 
 
     
