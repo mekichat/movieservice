@@ -17,6 +17,25 @@ public class Movie {
     private String genre;
     private String language;
 
+    public Integer movieTicketPrice(int numberOfPersons)
+    {
+        int ticketPrice = 0;
+       
+        if(released <= 1950){
+            ticketPrice = 100;
+        }
+        else if(released > 1950 & released <= 2000){
+            ticketPrice = 200;
+        }
+        else if(released > 2000 & released <= 2020){
+            ticketPrice = 250;
+        }
+        else{
+            ticketPrice = 300;
+        }
+        return ticketPrice * numberOfPersons;            
+    }
+    
     public Integer getId() {
         return id;
       }
