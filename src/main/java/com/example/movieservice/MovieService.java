@@ -63,22 +63,22 @@ public class MovieService {
 
         try {
             if(updatedMovie.getTitle() != null){
-                dbMovie.setTitle(dbMovie.getTitle());    
+                dbMovie.setTitle(updatedMovie.getTitle());    
             }
             if(updatedMovie.getReleased()!= 0){ 
-                dbMovie.setReleased(dbMovie.getReleased());    
+                dbMovie.setReleased(updatedMovie.getReleased());    
             }
             if(updatedMovie.getDirector() != null){
-                dbMovie.setDirector(dbMovie.getDirector());    
+                dbMovie.setDirector(updatedMovie.getDirector());    
             }
             if(updatedMovie.getActor()!= null){ 
-                dbMovie.setActor(dbMovie.getTitle());    
+                dbMovie.setActor(updatedMovie.getTitle());    
             }            
             if(updatedMovie.getGenre() != null){
-                dbMovie.setGenre(dbMovie.getGenre());    
+                dbMovie.setGenre(updatedMovie.getGenre());    
             }
             if(updatedMovie.getLanguage() != null){
-                dbMovie.setLanguage(dbMovie.getLanguage());    
+                dbMovie.setLanguage(updatedMovie.getLanguage());    
             } 
             
             movieServiceRepository.save(dbMovie);
