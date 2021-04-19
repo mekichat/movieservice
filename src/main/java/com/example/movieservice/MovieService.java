@@ -45,12 +45,12 @@ public class MovieService {
 
     Movie update(@PathVariable Integer id, @RequestBody Movie updatedMovie){
         Movie dbMovie = movieServiceRepository.findById(id).get();
-        dbMovie.setActor(dbMovie.getActor());
-        dbMovie.setDirector(dbMovie.getDirector());
-        dbMovie.setGenre(dbMovie.getGenre());
-        dbMovie.setLanguage(dbMovie.getLanguage());
-        dbMovie.setReleased(dbMovie.getReleased());
-        dbMovie.setTitle(dbMovie.getTitle());
+        dbMovie.setActor(updatedMovie.getActor());
+        dbMovie.setDirector(updatedMovie.getDirector());
+        dbMovie.setGenre(updatedMovie.getGenre());
+        dbMovie.setLanguage(updatedMovie.getLanguage());
+        dbMovie.setReleased(updatedMovie.getReleased());
+        dbMovie.setTitle(updatedMovie.getTitle());
        
         movieServiceRepository.save(dbMovie);       
 
